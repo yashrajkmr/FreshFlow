@@ -28,7 +28,7 @@ app.get('/login', (req, res) => {
 
 // route: serve main landing page
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index1.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // POST route: handle login form submission
