@@ -1,22 +1,13 @@
 {
   "inventory": [
     {
-      "id": 1,
       "name": "Farm Fresh Paneer 200g",
       "category": "Dairy",
-      "hoursLeft": 3,
-      "qty": 18,
-      "basePrice": 90,
-      "status": "pending"
-    },
-    {
-      "id": 2,
-      "name": "Whole Wheat Bread Loaf",
-      "category": "Bakery",
-      "hoursLeft": 5,
-      "qty": 24,
-      "basePrice": 55,
-      "status": "pending"
+      "hoursLeft": 1,
+      "qty": 5,
+      "basePrice": 48,
+      "status": "approved",
+      "id": 1
     },
     {
       "id": 3,
