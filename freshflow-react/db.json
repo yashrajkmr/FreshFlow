@@ -1,0 +1,67 @@
+{
+  "inventory": [
+    {
+      "id": 1,
+      "name": "Farm Fresh Paneer 200g",
+      "category": "Dairy",
+      "hoursLeft": 3,
+      "qty": 18,
+      "basePrice": 90,
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "name": "Whole Wheat Bread Loaf",
+      "category": "Bakery",
+      "hoursLeft": 5,
+      "qty": 24,
+      "basePrice": 55,
+      "status": "pending"
+    },
+    {
+      "id": 3,
+      "name": "Vine Tomatoes 1kg",
+      "category": "Produce",
+      "hoursLeft": 9,
+      "qty": 40,
+      "basePrice": 48,
+      "status": "pending"
+    },
+    {
+      "id": 4,
+      "name": "Greek Yogurt Cups (4-pack)",
+      "category": "Dairy",
+      "hoursLeft": 14,
+      "qty": 32,
+      "basePrice": 160,
+      "status": "pending"
+    },
+    {
+      "name": "Chicken Breast Fillet 500g",
+      "category": "Meat",
+      "hoursLeft": 9,
+      "qty": 10,
+      "basePrice": 200,
+      "status": "pending",
+      "id": 5
+    },
+    {
+      "name": "Farm Fresh Paneer 200g",
+      "category": "Dairy",
+      "hoursLeft": 3,
+      "qty": 20,
+      "basePrice": 87,
+      "status": "pending",
+      "id": 7
+    },
+    {
+      "name": "Farm Fresh Paneer 200g",
+      "category": "Dairy",
+      "hoursLeft": 5,
+      "qty": 20,
+      "basePrice": 88,
+      "status": "approved",
+      "id": 8
+    }
+  ]
+}
