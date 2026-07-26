@@ -453,3 +453,43 @@
   .stats-bar { grid-template-columns: repeat(2, 1fr); }
   .header-subtitle { font-size: 22px; }
 }
+
+/* ── toast notification — stamped receipt slip ─── */
+@keyframes toastIn {
+  from { transform: translate(-50%, -16px); opacity: 0; }
+  to   { transform: translate(-50%, 0);     opacity: 1; }
+}
+
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--mint);
+  border-radius: 3px;
+  padding: 13px 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--frost);
+  box-shadow: 0 12px 32px -8px rgba(0,0,0,0.5);
+  animation: toastIn 0.25s ease;
+  max-width: 90vw;
+}
+
+.toast i { font-size: 14px; }
+
+.toast-success { border-left-color: var(--mint); }
+.toast-success i { color: var(--mint); }
+
+.toast-delete { border-left-color: var(--sticker); }
+.toast-delete i { color: var(--sticker); }
+
+.toast-error { border-left-color: var(--amber); }
+.toast-error i { color: var(--amber); }

@@ -15,6 +15,13 @@ function App() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [editingItem, setEditingItem] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [toast, setToast] = useState(null); // { message, type }
+
+  // shows a toast notification for 2.5 seconds
+  function showToast(message, type = 'success') {
+    setToast({ message, type });
+    setTimeout(() => setToast(null), 2500);
+  }
 
   // READ - fetch all inventory items on component mount
   useEffect(() => {
@@ -29,6 +36,7 @@ function App() {
       setItems(data);
     } catch (err) {
       console.error('Failed to fetch inventory:', err);
+      showToast('Could not connect to json-server. Run "npm run server".', 'error');
     } finally {
       setLoading(false);
     }
@@ -47,6 +55,7 @@ function App() {
         const updated = await res.json();
         setItems(items.map((i) => (i.id === editId ? updated : i)));
         setEditingItem(null);
+        showToast(`"${updated.name}" updated successfully.`, 'success');
       } else {
         // CREATE - POST request for new record
         const res = await fetch(API_URL, {
@@ -56,10 +65,11 @@ function App() {
         });
         const created = await res.json();
         setItems([...items, created]);
+        showToast(`"${created.name}" added to inventory.`, 'success');
       }
     } catch (err) {
       console.error('Failed to save item:', err);
-      alert('Something went wrong. Make sure json-server is running on port 3001.');
+      showToast('Something went wrong. Is json-server running on port 3001?', 'error');
     }
   }
 
@@ -67,11 +77,15 @@ function App() {
   async function handleDelete(id) {
     if (!window.confirm('Are you sure you want to delete this item?')) return;
 
+    const target = items.find((i) => i.id === id);
+
     try {
       await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
       setItems(items.filter((i) => i.id !== id));
+      showToast(`"${target?.name}" removed from inventory.`, 'delete');
     } catch (err) {
       console.error('Failed to delete item:', err);
+      showToast('Failed to delete item.', 'error');
     }
   }
 
@@ -87,6 +101,18 @@ function App() {
 
   return (
     <div className="app">
+
+      {/* toast notification */}
+      {toast && (
+        <div className={`toast toast-${toast.type}`}>
+          <i className={`fa-solid ${
+            toast.type === 'success' ? 'fa-circle-check' :
+            toast.type === 'delete'  ? 'fa-trash' : 'fa-circle-exclamation'
+          }`}></i>
+          <span>{toast.message}</span>
+        </div>
+      )}
+
       <header className="app-header">
         <div className="logo">
           <i className="fa-solid fa-bolt"></i> FreshFlow
