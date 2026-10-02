@@ -422,3 +422,65 @@ Department: Dairy Section
 Action: Manual Audit Checkpoint Verified
 Manager Justification / Notes: Cold room temperature verified at 3.5C; shelf inventory verified.
 ------------------------------------------------------------------------
+Timestamp: 3/10/2026, 12:41:56 am
+Store Lead: Yashraj Kumar
+Staff ID: FF-MGR-01
+Department: Produce Department
+Action: Created Perishable Inventory Item: Automated Test Mango Punnet 1790968315956
+Item Affected: Automated Test Mango Punnet 1790968315956 (Qty: 25, Base: ₹140)
+Manager Justification / Notes: Batch logged into system with 8h shelf life.
+------------------------------------------------------------------------
+Timestamp: 3/10/2026, 12:41:56 am
+Store Lead: Yashraj Kumar
+Staff ID: FF-MGR-01
+Department: Produce Section
+Action: Approved 30% Markdown (₹140 -> ₹98)
+Item Affected: Automated Test Mango Punnet 1790968315956 (Qty: 25, Base: ₹140, Markdown Price: ₹98)
+Manager Justification / Notes: Batch approaching 8 hours limit. Discounted 30% for immediate customer checkout.
+------------------------------------------------------------------------
+Timestamp: 3/10/2026, 12:41:56 am
+Store Lead: Yashraj Kumar
+Staff ID: FF-MGR-01
+Department: Produce Department
+Action: Deleted Perishable Record: Automated Test Mango Punnet 1790968315956
+Item Affected: Automated Test Mango Punnet 1790968315956 (Qty: 35, Base: ₹140, Markdown Price: ₹98)
+Manager Justification / Notes: Item removed from active inventory ledger.
+------------------------------------------------------------------------
+Timestamp: 3/10/2026, 12:41:56 am
+Store Lead: Yashraj Kumar
+Staff ID: FF-MGR-01
+Department: Dairy Section
+Action: Manual Audit Checkpoint Verified
+Manager Justification / Notes: Cold room temperature verified at 3.5C; shelf inventory verified.
+------------------------------------------------------------------------
+Timestamp: 3/10/2026, 12:42:54 am
+Store Lead: Yashraj Kumar
+Staff ID: FF-MGR-01
+Department: Produce Department
+Action: Created Perishable Inventory Item: Automated Test Mango Punnet 1790968374291
+Item Affected: Automated Test Mango Punnet 1790968374291 (Qty: 25, Base: ₹140)
+Manager Justification / Notes: Batch logged into system with 8h shelf life.
+------------------------------------------------------------------------
+Timestamp: 3/10/2026, 12:42:54 am
+Store Lead: Yashraj Kumar
+Staff ID: FF-MGR-01
+Department: Produce Section
+Action: Approved 30% Markdown (₹140 -> ₹98)
+Item Affected: Automated Test Mango Punnet 1790968374291 (Qty: 25, Base: ₹140, Markdown Price: ₹98)
+Manager Justification / Notes: Batch approaching 8 hours limit. Discounted 30% for immediate customer checkout.
+------------------------------------------------------------------------
+Timestamp: 3/10/2026, 12:42:54 am
+Store Lead: Yashraj Kumar
+Staff ID: FF-MGR-01
+Department: Produce Department
+Action: Deleted Perishable Record: Automated Test Mango Punnet 1790968374291
+Item Affected: Automated Test Mango Punnet 1790968374291 (Qty: 35, Base: ₹140, Markdown Price: ₹98)
+Manager Justification / Notes: Item removed from active inventory ledger.
+------------------------------------------------------------------------
+Timestamp: 3/10/2026, 12:42:54 am
+Store Lead: Yashraj Kumar
+Staff ID: FF-MGR-01
+Department: Dairy Section
+Action: Manual Audit Checkpoint Verified
+Manager Justification / Notes: Cold room temperature verified at 3.5C; shelf inventory verified.
+------------------------------------------------------------------------

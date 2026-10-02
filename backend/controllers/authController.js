@@ -103,12 +103,24 @@ export const register = async (req, res) => {
     }
 
     // Generate unique staffId if not supplied
-    const generatedStaffId = staffId?.trim().toUpperCase() || `FF-STAFF-${Math.floor(100 + Math.random() * 900)}`;
-
-    // Check duplicate staffId
-    const existingStaff = await User.findOne({ staffId: generatedStaffId });
-    if (existingStaff) {
-      return res.status(409).json({ error: `Staff ID "${generatedStaffId}" is already assigned to an employee.` });
+    let generatedStaffId = staffId?.trim().toUpperCase();
+    if (!generatedStaffId) {
+      for (let attempt = 0; attempt < 10; attempt++) {
+        const candidate = `FF-STAFF-${Math.floor(10000 + Math.random() * 90000)}`;
+        const exists = await User.exists({ staffId: candidate });
+        if (!exists) {
+          generatedStaffId = candidate;
+          break;
+        }
+      }
+      if (!generatedStaffId) {
+        generatedStaffId = `FF-STAFF-${Date.now().toString().slice(-5)}`;
+      }
+    } else {
+      const existingStaff = await User.findOne({ staffId: generatedStaffId });
+      if (existingStaff) {
+        return res.status(409).json({ error: `Staff ID "${generatedStaffId}" is already assigned to an employee.` });
+      }
     }
 
     const newUser = await User.create({

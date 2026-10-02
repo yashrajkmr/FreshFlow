@@ -146,12 +146,15 @@ async function testSuite() {
         email: `${testUsername}@freshflow.internal`,
         password: 'securePassword123',
         name: 'Automated Test Clerk',
+        staffId: `FF-TST-${Date.now().toString().slice(-5)}`,
         role: 'Inventory Clerk',
         department: 'Produce Section'
       })
     });
     const registerData = await registerRes.json();
-    if (!registerData.token) throw new Error('JWT token missing from register response');
+    if (!registerRes.ok || !registerData.token) {
+      throw new Error(`Register failed (${registerRes.status}): ${registerData.error || 'JWT token missing'}`);
+    }
     console.log(`   ✅ Registered new user: ${registerData.user.name} [Staff ID: ${registerData.user.staffId}]\n`);
 
     // 14. GET /api/auth/profile with Bearer Token
