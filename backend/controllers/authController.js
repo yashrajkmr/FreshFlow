@@ -14,7 +14,7 @@ export const DEFAULT_USERS = [
     staffId: 'FF-MGR-01',
     role: 'Store Operations Lead',
     department: 'Dairy & Perishables',
-    storeLocation: 'Christ University Central Hub, Bangalore'
+    storeLocation: 'FreshFlow Flagship Store #104, Bangalore'
   },
   {
     username: 'admin',
@@ -34,7 +34,7 @@ export const DEFAULT_USERS = [
     staffId: 'FF-CLK-05',
     role: 'Inventory Clerk',
     department: 'Produce & Bakery',
-    storeLocation: 'Christ University Central Hub, Bangalore'
+    storeLocation: 'FreshFlow Flagship Store #104, Bangalore'
   }
 ];
 
@@ -119,7 +119,7 @@ export const register = async (req, res) => {
       staffId: generatedStaffId,
       role: role || 'Store Operations Lead',
       department: department?.trim() || 'Store Operations',
-      storeLocation: storeLocation?.trim() || 'Christ University Central Hub, Bangalore'
+      storeLocation: storeLocation?.trim() || 'FreshFlow Flagship Store #104, Bangalore'
     });
 
     const token = generateToken(newUser);

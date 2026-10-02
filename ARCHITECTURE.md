@@ -11,10 +11,10 @@ This document provides an exhaustive, file-by-file technical reference for the *
 | `frontend/` | **Client-Side SPA**: React 18 application built with Vite. Contains all UI components, custom hooks, state management, CSS styling, and native HTML5 API integrations. |
 | `backend/` | **Server-Side REST API**: Node.js & Express.js server. Encapsulates business logic, database models, route handlers, file system storage, and automated tests. |
 | `package.json` | **Root Orchestrator**: Uses `concurrently` to launch both the backend (Port 3001) and frontend (Port 5173) simultaneously using a single `npm run dev` command. |
-| `_archive_labs_backup/` | **Academic Archive**: A safe backup directory containing the raw lab exercises and prior development snapshots, isolated from the production code. |
-| `.gitignore` | Standard version control exclusions for `node_modules`, build outputs (`dist/`), temporary logs, and the archive folder. |
+| `DEPLOYMENT.md` | **Enterprise Deployment Guide**: Step-by-step instructions for cloud hosting on Render/Railway with MongoDB Atlas and interview presentation protocol. |
+| `.gitignore` | Standard version control exclusions for `node_modules`, build outputs (`dist/`), and temporary logs. |
 | `README.md` | Executive project documentation featuring problem statements, system architecture, API specifications, and quickstart commands. |
-| `INTERVIEW-GUIDE.md` | 3-minute live demonstration script, elevator pitch, and top interview questions & answers. |
+| `INTERVIEW-GUIDE.md` | 5-minute live demonstration script, elevator pitch, and top interview questions & answers. |
 
 ---
 

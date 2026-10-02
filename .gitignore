@@ -35,14 +35,11 @@ logs/
 *.sqlite
 *.sqlite3
 
-# Archives (old submissions)
+# Archives & compressed assets
 *.zip
 *.tar.gz
 
 # Temporary files
 *.tmp
 *.bak
-
-# Archived legacy lab submissions
-_archive_labs_backup/
 

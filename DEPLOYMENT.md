@@ -3,39 +3,22 @@
 
 ---
 
-## 📌 Part 1: Uploading to Your GitHub Repository
+## 📌 Part 1: GitHub Repository Showcase
 
-Your project currently has its git remote set to:
-```
-origin  https://github.com/yashrajkmr/FreshFlow-CIA-1B.git
-```
+Your project repository is synchronized on the default **`main`** branch.
 
-### Step 1: Stage All New Files & Commit
-Open your terminal in `c:\Users\Yashwant Kumar\Desktop\FreshFlow-Master` and run:
+### 💡 Pro Tip: Rename Repository to `FreshFlow` (Recommended)
+To make your repository 100% official and remove the college course tag (`CIA-1B`):
+1. Go to your GitHub repository: `https://github.com/yashrajkmr/FreshFlow-CIA-1B`.
+2. Click **Settings** (top right tab of repository).
+3. Under **General** $\rightarrow$ **Repository name**, change `FreshFlow-CIA-1B` to **`FreshFlow`** (or **`FreshFlow-Enterprise`**).
+4. Click **Rename**.
+5. In your local terminal, update your git remote URL:
+   ```bash
+   git remote set-url origin https://github.com/yashrajkmr/FreshFlow.git
+   ```
 
-```bash
-# 1. Check current status
-git status
-
-# 2. Stage all modern codebase files (backend, frontend, documentation, config)
-git add .
-
-# 3. Create a clean, professional commit
-git commit -m "feat: complete FreshFlow 2026 enterprise transformation with dynamic pricing engine, split auth, and visual shelf console"
-```
-
-### Step 2: Push to GitHub (`main` Branch Recommended)
-For recruiter and interviewer visibility, having your project on the default **`main`** branch ensures anyone visiting `https://github.com/yashrajkmr/FreshFlow-CIA-1B` immediately sees the latest enterprise code and README:
-
-```bash
-# Switch to or create 'main' branch
-git branch -M main
-
-# Push to your remote GitHub repository
-git push -u origin main
-```
-
-*(If you prefer to push to the existing `lab-exercise-5-6` branch first, you can run `git push origin lab-exercise-5-6`, then open a Pull Request to merge into `main` on GitHub).*
+*(GitHub automatically forwards old links, but renaming presents a clean, professional open-source product image on your profile and resume).*
 
 ---
 

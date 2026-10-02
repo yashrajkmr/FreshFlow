@@ -62,14 +62,14 @@ function App() {
             staffId: 'FF-MGR-01',
             role: 'Store Operations Lead',
             department: 'Dairy & Perishables',
-            storeLocation: 'Christ University Central Hub, Bangalore'
+            storeLocation: 'FreshFlow Flagship Store #104, Bangalore'
           };
     } catch (_e) {
       return {
         name: 'Yashraj Kumar',
         staffId: 'FF-MGR-01',
         role: 'Store Operations Lead',
-        storeLocation: 'Christ University Central Hub, Bangalore'
+        storeLocation: 'FreshFlow Flagship Store #104, Bangalore'
       };
     }
   });

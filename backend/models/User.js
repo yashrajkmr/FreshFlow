@@ -58,7 +58,7 @@ const userSchema = new mongoose.Schema(
     },
     storeLocation: {
       type: String,
-      default: 'Christ University Central Hub, Bangalore'
+      default: 'FreshFlow Flagship Store #104, Bangalore'
     }
   },
   {

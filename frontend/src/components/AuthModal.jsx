@@ -51,7 +51,7 @@ function AuthModal({ isOpen, onClose, onAuthSuccess, showToast }) {
     staffId: '',
     role: 'Store Operations Lead',
     department: 'Dairy & Perishables',
-    storeLocation: 'Christ University Central Hub, Bangalore'
+    storeLocation: 'FreshFlow Flagship Store #104, Bangalore'
   });
 
   if (!isOpen) return null;

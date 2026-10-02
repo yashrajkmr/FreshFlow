@@ -72,7 +72,7 @@ export default function AuthPage({ onAuthSuccess, onNavigateToDashboard, showToa
   const [regPassword, setRegPassword] = useState('');
   const [regRole, setRegRole] = useState('Store Operations Lead');
   const [regDepartment, setRegDepartment] = useState('Dairy & Perishables');
-  const [regLocation, setRegLocation] = useState('Christ University Central Hub, Bangalore');
+  const [regLocation, setRegLocation] = useState('FreshFlow Flagship Store #104, Bangalore');
 
   // Handle Login Submit
   const handleLoginSubmit = async (e) => {
