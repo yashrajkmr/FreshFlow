@@ -1,0 +1,101 @@
+/* FreshFlow - Operational Design System (Linear, Stripe, Vercel & Mercury Benchmarks) */
+:root {
+  /* Neutral Base Palette (Linear & Vercel dark-first restraint) */
+  --bg-app: #09090b;            /* Canvas background */
+  --bg-surface: #121215;        /* Cards, panels, tables */
+  --bg-surface-hover: #18181d;  /* Table row hover, subtle interactive elements */
+  --bg-surface-active: #222228; /* Pressed states, active pills */
+  --bg-input: #111114;          /* Inputs, search boxes */
+
+  /* Hairline Borders & Dividers (Stripe / Linear 1px precision) */
+  --border-subtle: #27272a;     /* Default borders (1px solid) */
+  --border-muted: #1e1e24;      /* Fainter table dividers */
+  --border-strong: #3f3f46;     /* Focused, active, or selected borders */
+
+  /* Typography Scale & Hierarchy (Mercury / Plausible) */
+  --text-primary: #f4f4f5;      /* High-contrast titles, primary numbers */
+  --text-secondary: #a1a1aa;    /* Labels, descriptions, secondary values */
+  --text-tertiary: #71717a;     /* Table headers, metadata, SKUs, timestamps */
+  --text-disabled: #52525b;     /* Inactive elements */
+
+  /* Operational Status Triad (Strictly reserved for urgency & status) */
+  --status-critical: #ef4444;   /* < 6h to expiry (Rose/Red) */
+  --status-critical-bg: rgba(239, 68, 68, 0.1);
+  --status-critical-border: rgba(239, 68, 68, 0.25);
+
+  --status-urgent: #f59e0b;     /* 6–12h to expiry (Amber) */
+  --status-urgent-bg: rgba(245, 158, 11, 0.1);
+  --status-urgent-border: rgba(245, 158, 11, 0.25);
+
+  --status-healthy: #10b981;    /* Approved / Safe (> 12h) (Emerald) */
+  --status-healthy-bg: rgba(16, 185, 129, 0.1);
+  --status-healthy-border: rgba(16, 185, 129, 0.25);
+
+  --status-info: #06b6d4;       /* Watch / Informational (Cyan) */
+  --status-info-bg: rgba(6, 182, 212, 0.1);
+  --status-info-border: rgba(6, 182, 212, 0.25);
+
+  /* Single Quiet Brand Accent */
+  --accent-primary: #10b981;
+  --accent-primary-hover: #059669;
+  --accent-subtle: rgba(16, 185, 129, 0.12);
+
+  /* Typography Families & Features */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing Grid (4px / 8px) */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Transitions: Fast, functional, non-distracting */
+  --transition-fast: 120ms ease;
+  --transition-normal: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.45;
+  letter-spacing: -0.011em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Plausible / Stripe Standard: Enforce Tabular Numerals for all figures */
+.tnum, code, pre, .col-numeric, .price-val, .stat-figure, .stat-value {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
+}
+
+/* Restrained Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
