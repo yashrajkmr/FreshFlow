@@ -150,21 +150,22 @@ app.use((err, _req, res, _next) => {
 
 // ── Bootstrapping Database & Server ──
 async function startServer() {
-  try {
-    await connectDB();
-    app.listen(PORT, () => {
-      console.log(`====================================================`);
-      console.log(`🚀 FreshFlow Enterprise Engine running at http://localhost:${PORT}`);
-      console.log(`📑 OpenAPI 3.0 Swagger UI:   http://localhost:${PORT}/api/v1/docs`);
-      console.log(`⚡ Algorithmic Evaluator:    http://localhost:${PORT}/api/v1/pricing/evaluate-batch`);
-      console.log(`📦 Decaying Inventory API:   http://localhost:${PORT}/api/v1/inventory/decaying`);
-      console.log(`📡 Real-Time Telemetry:      http://localhost:${PORT}/api/v1/telemetry`);
-      console.log(`====================================================`);
-    });
-  } catch (err) {
-    console.error('Fatal: Failed to boot FreshFlow server:', err.message);
-    process.exit(1);
-  }
+  app.listen(PORT, async () => {
+    console.log(`====================================================`);
+    console.log(`🚀 FreshFlow Enterprise Engine running at http://localhost:${PORT}`);
+    console.log(`📑 OpenAPI 3.0 Swagger UI:   http://localhost:${PORT}/api/v1/docs`);
+    console.log(`⚡ Algorithmic Evaluator:    http://localhost:${PORT}/api/v1/pricing/evaluate-batch`);
+    console.log(`📦 Decaying Inventory API:   http://localhost:${PORT}/api/v1/inventory/decaying`);
+    console.log(`📡 Real-Time Telemetry:      http://localhost:${PORT}/api/v1/telemetry`);
+    console.log(`====================================================`);
+
+    try {
+      await connectDB();
+    } catch (err) {
+      console.error('⚠️ Warning: MongoDB connection deferred:', err.message);
+      console.error('The server remains online and will retry connecting.');
+    }
+  });
 }
 
 startServer();
