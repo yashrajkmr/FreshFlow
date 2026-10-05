@@ -5,20 +5,10 @@
 
 ## 📌 Part 1: GitHub Repository Showcase
 
-Your project repository is synchronized on the default **`main`** branch.
+Your project repository is synchronized on the default **`main`** branch:
+👉 **`https://github.com/yashrajkmr/FreshFlow`**
 
-### 💡 Pro Tip: Rename Repository to `FreshFlow` (Recommended)
-To make your repository 100% official and remove the college course tag (`CIA-1B`):
-1. Go to your GitHub repository: `https://github.com/yashrajkmr/FreshFlow-CIA-1B`.
-2. Click **Settings** (top right tab of repository).
-3. Under **General** $\rightarrow$ **Repository name**, change `FreshFlow-CIA-1B` to **`FreshFlow`** (or **`FreshFlow-Enterprise`**).
-4. Click **Rename**.
-5. In your local terminal, update your git remote URL:
-   ```bash
-   git remote set-url origin https://github.com/yashrajkmr/FreshFlow.git
-   ```
-
-*(GitHub automatically forwards old links, but renaming presents a clean, professional open-source product image on your profile and resume).*
+Your repository is professionally named and ready to showcase directly on your resume, LinkedIn, and project portfolio.
 
 ---
 
@@ -44,7 +34,7 @@ Because we unified **FreshFlow** so that Express serves both the REST API and th
 #### 2. Deploy on Render:
 1. Log in to [render.com](https://render.com) using your GitHub account.
 2. Click **New +** -> **Web Service**.
-3. Select your repository: `yashrajkmr/FreshFlow-CIA-1B`.
+3. Select your repository: `yashrajkmr/FreshFlow`.
 4. Configure the settings:
    - **Name:** `freshflow-enterprise` (or your choice)
    - **Region:** Singapore / Frankfurt / Oregon (closest to you)
@@ -73,7 +63,7 @@ https://freshflow-enterprise.onrender.com
 
 ### Option B: Railway.app Deployment
 1. Log in to [railway.app](https://railway.app) with GitHub.
-2. Click **New Project** -> **Deploy from GitHub repo** -> Select `FreshFlow-CIA-1B`.
+2. Click **New Project** -> **Deploy from GitHub repo** -> Select `FreshFlow`.
 3. In the project settings, add the same environment variables: `MONGO_URI`, `JWT_SECRET`, and `NODE_ENV=production`.
 4. Railway will auto-detect the root `package.json` scripts (`postinstall`, `build`, `start`) and deploy automatically with a custom domain.
 

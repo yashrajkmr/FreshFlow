@@ -5,7 +5,7 @@ import Item from '../models/Item.js';
 import RuleConfig from '../models/RuleConfig.js';
 import { seedDefaultUsers } from '../controllers/authController.js';
 
-const MONGO_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/freshflow';
+const MONGO_URI = process.env.MONGODB_URI || process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/freshflow';
 
 export const ENTERPRISE_SEED_ITEMS = [
   // ── Critical Decaying Window (< 6 Hours Remaining) ──
